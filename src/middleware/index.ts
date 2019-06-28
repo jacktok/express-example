@@ -5,4 +5,4 @@ import {
 } from "./common";
 
 
-export default [handleCors, handleBodyRequestPassing, handleCompression]
+export default [ handleCors, handleBodyRequestPassing, handleCompression]

@@ -6,7 +6,7 @@ const routing: Route[] = [
         path: "/",
         method: "get",
         handler: async (req: Request, res: Response) => {
-            res.send("Hello word")
+            res.send({"message": "hello"});
         }
     }
 ];

@@ -3,7 +3,6 @@ import cors from "cors"
 import paser from "body-parser"
 import compression from "compression"
 
-
 export const handleCors = (router: Router) => router.use(cors({credentials: true, origin: true}));
 
 export const handleBodyRequestPassing = (router: Router) => {
