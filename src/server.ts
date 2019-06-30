@@ -29,12 +29,11 @@ class User extends Model {
     public readonly user_role!: string;
     public readonly modified_time!: Date;
 
-    // public readonly createdAt!: Date;
-    // public readonly updatedAt!: Date;
-    // public readonly  post?: Post[] ;
-    // public static associations: {
-    //     posts: Association<User, Post>;
-    // }
+
+    public readonly  post?: Post[] ;
+    public static associations: {
+        posts: Association<User, Post>;
+    }
 }
 
 class Post extends Model {
@@ -100,7 +99,7 @@ process.on("unhandledRejection", e => {
 async function load() {
     const test = await User.findAll();
     test.forEach(user => {
-        console.log(user.name)
+        console.log(user)
     })
 }
 
