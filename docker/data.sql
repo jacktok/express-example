@@ -1,4 +1,8 @@
 create database express_example;
+
+\connect express_example;
+
+
 create schema app_example;
 set search_path = app_example;
 

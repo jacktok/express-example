@@ -1,0 +1,8 @@
+version: '3'
+services:
+  express-example-pg:
+    image: "express_example_pg:1"
+    environment:
+      - POSTGRES_PASSWORD=sqlr00t
+    ports:
+      - "5432:5432"

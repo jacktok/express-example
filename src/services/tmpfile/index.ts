@@ -1,7 +1,7 @@
 import {Route} from "../../utils";
 import formidable from "formidable";
-import util from "util";
 import fs from 'fs';
+
 const routing: Route[] = [
     {
         path: "/upload",
@@ -16,18 +16,17 @@ const routing: Route[] = [
         handler: (req, res) => {
             const form = new formidable.IncomingForm();
             form.parse(req, (err, fields, files) => {
-                const oldpath = files.upload.path;
-                const newpath = 'C:\\Users\\jacktok\\Desktop\\devjs\\tmp\\' + files.upload.name;
-                fs.rename(oldpath, newpath, function (err) {
-                    console.log('write file at ' + newpath);
+                const oldPath = files.upload.path;
+                const newPath = 'C:\\Users\\jacktok\\Desktop\\devjs\\tmp\\' + files.upload.name;
+                fs.rename(oldPath, newPath, function (err) {
+                    console.log('write file at ' + newPath);
 
                     if (err) throw err;
                     res.write('File uploaded and moved!');
                     res.end();
                 });
             });
-
-        }
+        },
     }
 ];
 export default routing;
