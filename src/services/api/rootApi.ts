@@ -1,13 +1,15 @@
 import {Route} from "../../utils";
 
-const router: Route[] = [
+
+const rootApi: Route[] = [
     {
-        path: '/user',
+        path: '/',
         method: 'get',
         handler: (req, res) => {
-            res.send({message: 'user'})
+            res.send('hello')
         }
     }
 ];
 
-export default router;
+
+export default rootApi;

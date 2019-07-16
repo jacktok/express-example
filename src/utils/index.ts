@@ -19,15 +19,15 @@ type Handler = (
     next: NextFunction
 ) => Promise<void> | void;
 
- export type Route = {
+export type Route = {
     path: string,
     method: string,
     handler: Handler | Handler[];
 };
 
-export const applyRoutes = (routers: Route[], router: Router) => {
+export const applyRoutes = (routers: Route[], router: Router, prefix: string = "") => {
     for (const route of routers) {
         const {method, path, handler} = route;
-        (router as any)[method](path, handler)
+        (router as any)[method](prefix + path, handler)
     }
 };

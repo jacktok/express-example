@@ -1,5 +1,4 @@
-import searchRouters from "./hello"
-import uploadRouter from "./tmpfile"
-import userRouter from "./user"
+import uploadRouter from "./api/tmpfile"
+import userRouter from "./api/user"
 
-export default [...searchRouters, ...uploadRouter, ...userRouter];
+// export default [...searchRouters, ...uploadRouter, ...userRouter];

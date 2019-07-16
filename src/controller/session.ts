@@ -1,9 +1,9 @@
-import {User} from "../database/userModel";
+import {UserTable} from "../database/userTable";
 
 class SessionControl {
-    sessionList: Map<string, User> = new Map<string, User>();
+    sessionList: Map<string, UserTable> = new Map<string, UserTable>();
 
-    addUser = (u: User) => {
+    addUser = (u: UserTable) => {
 
     }
 

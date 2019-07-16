@@ -1,4 +1,4 @@
-import {Route} from "../../utils";
+import {Route} from "../../../utils";
 import formidable from "formidable";
 import fs from 'fs';
 
